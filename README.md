@@ -2,7 +2,7 @@
 
 **微博数据 API · 微博搜索 · 微博评论采集 · 微博用户主页 · 微博热搜榜。**
 
-这个仓库是 [okdata](https://okdata.online/zh/?src=gh-weibo-api) 的微博接口示例：11 个接口在线可用，一个 API Key 调用，按次计费（$0.002 起），参数错误这类还没请求数据源就被拦下的调用不扣费。不用登录平台账号，不用 Cookie，不开浏览器，所以也不存在账号被风控的问题。
+这个仓库是 [okdata](https://okdata.online/zh/?src=gh-weibo-api) 的微博接口示例：11 个接口在线可用，一个 API Key 调用，按次计费（$0.002 起），不用订阅。不用登录平台账号，不用 Cookie，不开浏览器，所以也不存在账号被风控的问题。
 
 [免费注册拿 Key（送 $0.1 试用额度）](https://okdata.online/zh/signup/?src=gh-weibo-api) · [全部接口文档](https://okdata.online/zh/apis/?src=gh-weibo-api) · [接入 AI（MCP）](https://okdata.online/zh/mcp/?src=gh-weibo-api)
 
@@ -20,7 +20,7 @@
 | [微博用户微博](https://okdata.online/zh/apis/weibo/users/posts/list/) | 按用户 ID 取账号主页上的微博（原创和转发），从新到旧：正文（长微博在这里是截短的，ext.text_truncated 标明）、点赞、评论、转发、视频播放数、图片和话题。 | $0.002 / 次 | `GET /v1/weibo/users/posts/list` |
 | [微博用户粉丝列表](https://okdata.online/zh/apis/weibo/users/followers/list/) | 关注这个用户的账号，每页 20 个：昵称、简介、头像、认证和认证类型、粉丝、关注、微博数、注册时间，以及资料里填的性别和地区。微博只给前几页。 | $0.002 / 次 | `GET /v1/weibo/users/followers/list` |
 | [微博用户搜索](https://okdata.online/zh/apis/weibo/users/search/) | 按关键词搜微博账号：用户 ID、昵称、头像和主页链接。 | $0.002 / 次 | `GET /v1/weibo/users/search` |
-| [微博热搜榜（备用版）](https://okdata.online/zh/apis/weibo/backup/trends/list/) | 微博热搜榜（weibo.trends.list）的备用版，原接口取不到时改调：走另一条数据通道（App 端）取微博热搜，价格略高。50 个上榜话题、名次和热度；不含置顶话题和推广位。 | $0.0025 / 次 | `GET /v1/weibo/backup/trends/list` |
+| [微博热搜榜（备用版）](https://okdata.online/zh/apis/weibo/backup/trends/list/) | 微博热搜榜（weibo.trends.list）的备用版，原接口取不到时改调：取微博热搜（App 端），价格略高。50 个上榜话题、名次和热度；不含置顶话题和推广位。 | $0.0025 / 次 | `GET /v1/weibo/backup/trends/list` |
 
 ## 快速开始
 
@@ -67,7 +67,7 @@ Cursor、Cherry Studio、WorkBuddy 等支持远程 MCP 的客户端：
 
 **要登录平台账号吗？** 不用。数据是公开内容，okdata 在服务端获取，你的账号完全不参与。
 
-**怎么收费？** 每个接口单独定价，表里写的就是一次调用的价格；按条计费的接口按实际返回条数算。请求到了数据源的调用，返回为空、查不到或出错也照常计费（按条计费的按 1 条算）；参数错误这类还没请求数据源就被拦下的不扣费。新账号送 $0.1 试用额度，之后按需充值，没有订阅。价格页：https://okdata.online/zh/pricing/
+**怎么收费？** 每个接口单独定价，表里写的就是一次调用的价格；按条计费的接口按实际返回条数算。新账号送 $0.1 试用额度，之后 $10 起充，余额不过期，没有订阅。价格页：https://okdata.online/zh/pricing/ ，计费说明：https://okdata.online/zh/docs/billing/
 
 **和官方开放平台有什么区别？** 官方开放平台只能读授权给你的账号自己的数据，而且要企业资质和审核；这里是平台上任何人都能看到的公开数据，比如搜索结果、别人的笔记或视频、评论、热榜。
 
