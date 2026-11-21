@@ -4,7 +4,7 @@
 
 这个仓库是 [okdata](https://okdata.online/zh/?src=gh-weibo-api) 的微博接口示例：11 个接口在线可用，一个 API Key 调用，按次计费（$0.002 起），不用订阅。不用登录平台账号，不用 Cookie，不开浏览器，所以也不存在账号被风控的问题。
 
-[免费注册拿 Key（送 $0.1 试用额度）](https://okdata.online/zh/signup/?src=gh-weibo-api) · [全部接口文档](https://okdata.online/zh/apis/?src=gh-weibo-api) · [接入 AI（MCP）](https://okdata.online/zh/mcp/?src=gh-weibo-api)
+[免费注册拿 Key（免费试用，最多可调 333 次）](https://okdata.online/zh/signup/?src=gh-weibo-api) · [全部接口文档](https://okdata.online/zh/apis/?src=gh-weibo-api) · [接入 AI（MCP）](https://okdata.online/zh/mcp/?src=gh-weibo-api)
 
 ## 接口清单
 
@@ -67,7 +67,7 @@ Cursor、Cherry Studio、WorkBuddy 等支持远程 MCP 的客户端：
 
 **要登录平台账号吗？** 不用。数据是公开内容，okdata 在服务端获取，你的账号完全不参与。
 
-**怎么收费？** 每个接口单独定价，表里写的就是一次调用的价格；按条计费的接口按实际返回条数算。新账号送 $0.1 试用额度，之后 $10 起充，余额不过期，没有订阅。价格页：https://okdata.online/zh/pricing/?src=gh-weibo-api ，计费说明：https://okdata.online/zh/docs/billing/?src=gh-weibo-api
+**怎么收费？** 每个接口单独定价，表里写的就是一次调用的价格；按条计费的接口按实际返回条数算。新账号免费试用，最多可调 333 次，之后 $10 起充，余额不过期，没有订阅。价格页：https://okdata.online/zh/pricing/?src=gh-weibo-api ，计费说明：https://okdata.online/zh/docs/billing/?src=gh-weibo-api
 
 **和官方开放平台有什么区别？** 官方开放平台只能读授权给你的账号自己的数据，而且要企业资质和审核；这里是平台上任何人都能看到的公开数据，比如搜索结果、别人的笔记或视频、评论、热榜。
 
