@@ -38,6 +38,26 @@ Python 版在 [examples/quickstart.py](examples/quickstart.py)（只用标准库
 
 返回统一的结构：列表在 `data.items`，下一页用 `page.next_cursor` 传回 `cursor`，这次扣了多少钱在 `meta.billing.amount`，平台不提供的字段为 null 并在 `meta.unavailable` 里写明原因。
 
+热搜榜不用翻页，一条命令取 50 条：
+
+```bash
+curl -G "https://api.okdata.online/v1/weibo/trends/list" \
+  -H "Authorization: Bearer $OKDATA_API_KEY"
+```
+
+### 真实输出（2026-11-22 实跑）
+
+上面这条命令当天取回 50 个上榜话题，前三条是：
+
+```console
+1  主播私闯果园带货糟蹋一千多斤苹果  2,516,054
+2  女博士卧底当主播称至今心理阴影      998,475
+3  温差待消弭信心不可失              798,218
+花费 $0.002
+```
+
+完整响应在 [examples/weibo.trends.list.json](examples/weibo.trends.list.json)（50 条，含每条的 `rank`、`name`、`heat` 和微博搜索链接）。热搜会变，榜单以你调用时为准。
+
 ## 让 AI 直接用（MCP）
 
 Claude Code：
